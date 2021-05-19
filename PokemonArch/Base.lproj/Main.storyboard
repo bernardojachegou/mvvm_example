@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PokemonArch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="s2z-yZ-o8h" userLabel="Pokemon Table View">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="PokemonInfoCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PokemonTableViewCell" rowHeight="80" id="JSQ-ul-EZW" userLabel="PokemonTableViewCell" customClass="PokemonTableViewCell" customModule="PokemonArch" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JSQ-ul-EZW" id="S5Q-dQ-faB">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y2D-ic-wHn" userLabel="Pokemon Name Label">
+                                                    <rect key="frame" x="20" y="11" width="374" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jie-yI-rcf" userLabel="Pokemon Url Label">
+                                                    <rect key="frame" x="20" y="42" width="374" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="jie-yI-rcf" firstAttribute="leading" secondItem="S5Q-dQ-faB" secondAttribute="leadingMargin" id="5rR-mV-bEb"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Y2D-ic-wHn" secondAttribute="trailing" id="JYe-KZ-ErN"/>
+                                                <constraint firstItem="Y2D-ic-wHn" firstAttribute="leading" secondItem="S5Q-dQ-faB" secondAttribute="leadingMargin" id="Mam-mI-XFg"/>
+                                                <constraint firstItem="jie-yI-rcf" firstAttribute="top" secondItem="Y2D-ic-wHn" secondAttribute="bottom" constant="10" id="VWX-TR-VXg"/>
+                                                <constraint firstItem="Y2D-ic-wHn" firstAttribute="top" secondItem="S5Q-dQ-faB" secondAttribute="topMargin" id="ojD-HW-Gy9"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="jie-yI-rcf" secondAttribute="trailing" id="rPy-UG-NTe"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="pokemonNameLabel" destination="Y2D-ic-wHn" id="R2r-VQ-KvW"/>
+                                            <outlet property="pokemonUrlLabel" destination="jie-yI-rcf" id="Qpo-7J-Ybg"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="s2z-yZ-o8h" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3GO-PY-efd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="s2z-yZ-o8h" secondAttribute="bottom" id="ICM-WW-v6Q"/>
+                            <constraint firstItem="s2z-yZ-o8h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KhH-jG-ITz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="s2z-yZ-o8h" secondAttribute="trailing" id="nfh-R7-xQI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pokemonTableView" destination="s2z-yZ-o8h" id="DtX-4I-GIA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
